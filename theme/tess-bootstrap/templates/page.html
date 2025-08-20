@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <article>
+                <header class="mb-5">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h1 class="display-5 fw-bold text-primary mb-3">{{ page.title }}</h1>
+                            {% if page.summary %}
+                            <p class="lead text-muted">{{ page.summary }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </header>
+                
+                <div class="page-content">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            {{ page.content }}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA для страниц -->
+                <div class="mt-5">
+                    <div class="card">
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-primary mb-3">Нужна консультация?</h5>
+                            <p class="mb-3">Получите персональную консультацию в течение 2 часов</p>
+                            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                <a href="{{ SITEURL }}/контакты/" class="btn btn-primary">
+                                    📞 Связаться с нами
+                                </a>
+                                <a href="mailto:laipnis@mail.ru" class="btn btn-outline-primary">
+                                    ✉️ Написать письмо
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Хлебные крошки -->
+<section class="breadcrumbs-section py-2">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="{{ SITEURL }}/" class="text-decoration-none">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- ЗАГОЛОВОК С ИКОНКОЙ -->
+<section class="page-header py-5">
+    <div class="container text-center">
+        <div class="page-title-container mb-3">
+            <img src="{{ SITEURL }}/images/icons/contacts-header.png" 
+                 alt="Контакты" class="page-icon"
+                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/2bc81751-0538-44d1-bd08-612bd5427a9d.png'">
+            <h1 class="page-title">Контакты</h1>
+        </div>
+        <p class="lead text-muted">
+            Свяжитесь с нами для получения профессиональной юридической помощи
+        </p>
+    </div>
+</section>
+
+<!-- Основная секция контактов -->
+<section class="contacts-section py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Контактная информация -->
+            <div class="col-lg-6">
+                <div class="card contact-card h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">📞 Контактная информация</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- Email -->
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="{{ SITEURL }}/images/icons/email-contact.png" 
+                                     alt="Email" class="small-contact-icon me-3"
+                                     onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6ff71ef7-2c19-4966-bfbc-58e96892a978.png'">
+                                <h5 class="text-primary mb-0">📧 Электронная почта</h5>
+                            </div>
+                            <p class="ms-5 mb-1"><strong>laipnis@mail.ru</strong></p>
+                            <p class="ms-5 text-muted">Отвечаем в течение 2 часов в рабочее время</p>
+                        </div>
+
+                        <!-- Телефон -->
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="{{ SITEURL }}/images/icons/phone-contact.png" 
+                                     alt="Телефон" class="small-contact-icon me-3"
+                                     onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/343bfb01-c6f4-4829-abda-7bcc3fa3e7f0.png'">
+                                <h5 class="text-primary mb-0">📱 Телефон</h5>
+                            </div>
+                            <p class="ms-5 mb-1"><strong>+7 926 741-95-09</strong></p>
+                            <p class="ms-5 text-muted">Звоните с 9:00 до 18:00 по московскому времени</p>
+                        </div>
+
+                        <!-- Местоположение -->
+                        <div class="contact-item mb-0">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="{{ SITEURL }}/images/icons/location-contact.png" 
+                                     alt="Местоположение" class="small-contact-icon me-3"
+                                     onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/3d87f196-f297-4b39-8196-0a89c14ccbda.png'">
+                                <h5 class="text-primary mb-0">📍 Местоположение</h5>
+                            </div>
+                            <p class="ms-5 mb-1"><strong>Встречи по предварительной записи</strong></p>
+                            <p class="ms-5 text-muted">Обсуждаем формат встречи при записи</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Часы работы -->
+            <div class="col-lg-6">
+                <div class="card contact-card h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">🕒 Часы работы</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="{{ SITEURL }}/images/icons/clock-contact.png" 
+                                 alt="Часы работы" class="small-contact-icon me-3"
+                                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/7674693a-839a-492c-8bc1-ba2fa92ea7ce.png'">
+                            <div>
+                                <h5 class="text-primary mb-1">Время работы</h5>
+                                <p class="text-muted mb-0">Мы всегда готовы помочь</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-table">
+                            <div class="row py-2 border-bottom">
+                                <div class="col-6"><strong>Понедельник - Пятница</strong></div>
+                                <div class="col-6 text-end">9:00 - 18:00</div>
+                            </div>
+                            <div class="row py-2 border-bottom">
+                                <div class="col-6">Суббота</div>
+                                <div class="col-6 text-end">По предварительной записи</div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-6">Воскресенье</div>
+                                <div class="col-6 text-end">Выходной</div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info mt-4">
+                            <h6 class="alert-heading">⚡ Срочные вопросы</h6>
+                            <p class="mb-0">При критических ситуациях (блокировка счетов, срочные дела) звоните в любое время — найдём способ помочь.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Способы связи -->
+<section class="contact-methods-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-primary">🤝 Как лучше обратиться за помощью</h2>
+        </div>
+        
+        <div class="row g-4">
+            <!-- По E-mail -->
+            <div class="col-md-4">
+                <div class="card contact-method-card h-100 text-center">
+                    <div class="card-body">
+                        <img src="{{ SITEURL }}/images/icons/email-contact.png" 
+                             alt="Email" class="method-icon mb-3"
+                             onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6ff71ef7-2c19-4966-bfbc-58e96892a978.png'">
+                        <h5 class="text-primary">По E-mail</h5>
+                        <p class="text-muted">Для подробного описания ситуации. Приложите документы, если они есть.</p>
+                        <a href="mailto:laipnis@mail.ru" class="btn btn-outline-primary">Написать письмо</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- По телефону -->
+            <div class="col-md-4">
+                <div class="card contact-method-card h-100 text-center">
+                    <div class="card-body">
+                        <img src="{{ SITEURL }}/images/icons/phone-contact.png" 
+                             alt="Телефон" class="method-icon mb-3"
+                             onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/343bfb01-c6f4-4829-abda-7bcc3fa3e7f0.png'">
+                        <h5 class="text-primary">По телефону</h5>
+                        <p class="text-muted">Для срочных консультаций и записи на встречу. Быстро обсудим план действий.</p>
+                        <a href="tel:+79267419509" class="btn btn-outline-primary">Позвонить сейчас</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Личная встреча -->
+            <div class="col-md-4">
+                <div class="card contact-method-card h-100 text-center">
+                    <div class="card-body">
+                        <img src="{{ SITEURL }}/images/icons/location-contact.png" 
+                             alt="Встреча" class="method-icon mb-3"
+                             onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/3d87f196-f297-4b39-8196-0a89c14ccbda.png'">
+                        <h5 class="text-primary">Личная встреча</h5>
+                        <p class="text-muted">Для сложных дел и долгосрочного сотрудничества. Обсуждаем место встречи индивидуально.</p>
+                        <a href="tel:+79267419509" class="btn btn-outline-primary">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Первая консультация -->
+<section class="consultation-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card consultation-card">
+                    <div class="card-body text-center p-5">
+                        <h3 class="text-primary mb-4">🎯 Первая консультация — бесплатно</h3>
+                        <p class="lead mb-4">15 минут достаточно, чтобы понять ситуацию и предложить план решения</p>
+                        
+                        <div class="consultation-benefits mb-4">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="benefit-item">
+                                        <strong>Получите персональную консультацию в течение 2 часов</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="benefit-item">
+                                        <strong>Сразу поймёте план действий и их стоимость</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-3 justify-content-center">
+                            <div class="col-auto">
+                                <a href="tel:+79267419509" class="btn btn-primary btn-lg">
+                                    📞 Связаться с нами
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="mailto:laipnis@mail.ru" class="btn btn-outline-primary btn-lg">
+                                    ✉️ Написать письмо
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

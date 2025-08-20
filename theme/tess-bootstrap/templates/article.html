@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <article>
+                <header class="mb-5">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h1 class="display-5 fw-bold text-primary mb-3">{{ article.title }}</h1>
+                            {% if article.summary %}
+                            <p class="lead text-muted">{{ article.summary }}</p>
+                            {% endif %}
+                            <div class="text-muted">
+                                <small>
+                                    📅 {{ article.locale_date }}
+                                    {% if article.author %} | 👤 {{ article.author }}{% endif %}
+                                    {% if article.category %} | 🏷️ {{ article.category }}{% endif %}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                
+                <div class="article-content">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            {{ article.content }}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Лайки и шеринг -->
+                <div class="mt-4">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center gap-3 flex-wrap">
+                                <button class="btn btn-outline-warning like-btn" onclick="likeArticle('{{ article.slug }}')">
+                                    ❤️ <span id="like-count">0</span>
+                                </button>
+                                
+                                <div class="social-share d-flex align-items-center gap-2">
+                                    <small class="text-muted">Поделиться:</small>
+                                    <a href="https://t.me/share/url?url={{ SITEURL }}/{{ article.url }}&text={{ article.title }}" 
+                                       class="btn btn-sm btn-outline-primary" target="_blank">
+                                        Telegram
+                                    </a>
+                                    <a href="https://wa.me/?text={{ article.title }} {{ SITEURL }}/{{ article.url }}" 
+                                       class="btn btn-sm btn-outline-success" target="_blank">
+                                        WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Комментарии -->
+                {% if article.metadata.get('static_comments') %}
+                <section class="mt-5">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold text-primary mb-4">💬 Комментарии</h4>
+                            {{ article.metadata.static_comments }}
+                        </div>
+                    </div>
+                </section>
+                {% endif %}
+                
+                <!-- CTA для статей -->
+                <div class="mt-5">
+                    <div class="card">
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-primary mb-3">Нужна юридическая помощь?</h5>
+                            <p class="mb-3">Получите профессиональную консультацию по вашему вопросу</p>
+                            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                <a href="{{ SITEURL }}/контакты/" class="btn btn-primary">
+                                    📞 Получить консультацию
+                                </a>
+                                <a href="{{ SITEURL }}/leadmagnets/" class="btn btn-outline-primary">
+                                    📋 Бесплатные материалы
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<script>
+// Простая система лайков
+function likeArticle(slug) {
+    const likeCount = document.getElementById('like-count');
+    const likeBtn = document.querySelector('.like-btn');
+    const currentLikes = parseInt(likeCount.textContent);
+    
+    likeCount.textContent = currentLikes + 1;
+    likeBtn.disabled = true;
+    likeBtn.classList.remove('btn-outline-warning');
+    likeBtn.classList.add('btn-warning');
+    
+    // Сохраняем в localStorage
+    localStorage.setItem('liked_' + slug, 'true');
+}
+
+// Проверяем лайки при загрузке
+document.addEventListener('DOMContentLoaded', function() {
+    const slug = '{{ article.slug }}';
+    if (localStorage.getItem('liked_' + slug)) {
+        const likeBtn = document.querySelector('.like-btn');
+        if (likeBtn) {
+            likeBtn.disabled = true;
+            likeBtn.classList.remove('btn-outline-warning');
+            likeBtn.classList.add('btn-warning');
+        }
+    }
+});
+</script>
+{% endblock content %}

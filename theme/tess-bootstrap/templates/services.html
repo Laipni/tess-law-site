@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Хлебные крошки -->
+<section class="breadcrumbs-section py-2">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="{{ SITEURL }}/" class="text-decoration-none">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Услуги</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- ЗАГОЛОВОК С ИКОНКОЙ -->
+<section class="page-header py-5">
+    <div class="container text-center">
+        <div class="page-title-container mb-3">
+            <img src="{{ SITEURL }}/images/icons/services-header.png" 
+                 alt="Услуги" class="page-icon"
+                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/74ca1186-8ff0-4931-9d49-5a330413fd38.png'">
+            <h1 class="page-title">Услуги</h1>
+        </div>
+        <p class="lead text-muted">
+            Каталог услуг «ТЕСС» — налоговые споры, сопровождение сделок, корпоративные споры и другое для бизнеса
+        </p>
+    </div>
+</section>
+
+<!-- Юридические услуги для бизнеса -->
+<section class="services-intro-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="display-5 fw-bold text-primary mb-4">Юридические услуги для бизнеса</h2>
+                <p class="lead text-muted">
+                    Мы ведём компании на всех этапах: от первой консультации до финального судебного решения и его исполнения. 
+                    С «ТЕСС» у вас одна точка входа по всем правовым вопросам.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Основные услуги -->
+<section class="services-section py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Услуга 1: Налоговые споры -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="service-icon-container mb-4">
+                            <div class="service-icon">⚖️</div>
+                        </div>
+                        <h4 class="fw-bold text-primary mb-3">Налоговые споры</h4>
+                        <p class="text-muted flex-grow-1">
+                            Снижение доначислений, защита при проверках ФНС, оспаривание актов налоговых органов в арбитражных судах
+                        </p>
+                        <a href="{{ SITEURL }}/контакты/" class="btn btn-outline-primary mt-auto">Консультация</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Услуга 2: Судебное представительство -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="service-icon-container mb-4">
+                            <div class="service-icon">🏛️</div>
+                        </div>
+                        <h4 class="fw-bold text-primary mb-3">Судебное представительство</h4>
+                        <p class="text-muted flex-grow-1">
+                            Профессиональная защита интересов в арбитражных и общих судах всех инстанций. Опыт сложных дел
+                        </p>
+                        <a href="{{ SITEURL }}/контакты/" class="btn btn-outline-primary mt-auto">Консультация</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Услуга 3: Корпоративное право -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="service-icon-container mb-4">
+                            <div class="service-icon">🏢</div>
+                        </div>
+                        <h4 class="fw-bold text-primary mb-3">Корпоративные сделки</h4>
+                        <p class="text-muted flex-grow-1">
+                            Полное сопровождение M&A, реструктуризация бизнеса, создание и ликвидация юридических лиц
+                        </p>
+                        <a href="{{ SITEURL }}/контакты/" class="btn btn-outline-primary mt-auto">Консультация</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Услуга 4: Банкротство -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="service-icon-container mb-4">
+                            <div class="service-icon">🔄</div>
+                        </div>
+                        <h4 class="fw-bold text-primary mb-3">Банкротство</h4>
+                        <p class="text-muted flex-grow-1">
+                            Защита от оспаривания сделок и субсидиарной ответственности, сопровождение банкротных процедур
+                        </p>
+                        <a href="{{ SITEURL }}/контакты/" class="btn btn-outline-primary mt-auto">Консультация</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Услуга 5: Персональные данные -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="service-icon-container mb-4">
+                            <div class="service-icon">🔐</div>
+                        </div>
+                        <h4 class="fw-bold text-primary mb-3">Защита персональных данных</h4>
+                        <p class="text-muted flex-grow-1">
+                            Соответствие требованиям 152-ФЗ, разработка политик обработки данных, защита от штрафов Роскомнадзора
+                        </p>
+                        <a href="{{ SITEURL }}/контакты/" class="btn btn-outline-primary mt-auto">Консультация</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Услуга 6: Интеллектуальная собственность -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="service-icon-container mb-4">
+                            <div class="service-icon">💡</div>
+                        </div>
+                        <h4 class="fw-bold text-primary mb-3">Интеллектуальная собственность</h4>
+                        <p class="text-muted flex-grow-1">
+                            Регистрация товарных знаков, защита авторских прав, борьба с нарушениями в сфере IP
+                        </p>
+                        <a href="{{ SITEURL }}/контакты/" class="btn btn-outline-primary mt-auto">Консультация</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Детализация услуг - таблица -->
+<section class="services-details-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-primary text-center mb-5">Мы предлагаем</h2>
+                <div class="services-table-container">
+                    <table class="table table-hover services-table">
+                        <thead class="table-primary">
+                            <tr>
+                                <th scope="col" class="fw-bold">Услуга</th>
+                                <th scope="col" class="fw-bold">Что получаете</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Юридические консультации</strong></td>
+                                <td>Ясные рекомендации «что делать» и сроки без лишних формулировок</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Подготовка документов</strong></td>
+                                <td>Договоры, иски, жалобы с учётом свежей практики судов</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Сопровождение сделок</strong></td>
+                                <td>Проверка партнёров, налоговая оптимизация, безопасные расчёты</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Оспаривание сделок в банкротстве</strong></td>
+                                <td>Сохранение активов, снижение риска личной ответственности руководства</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Представительство в суде</strong></td>
+                                <td>Команда процессуалистов, готовых отстаивать позицию в апелляции и кассации</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Налоговые споры</strong></td>
+                                <td>Снижение доначислений и поддержка при проверках ФНС</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Налоговые консультации</strong></td>
+                                <td>Законные пути оптимизации налогообложения</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA секция -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4">Нужна консультация по вашей ситуации?</h2>
+        <p class="lead mb-4 opacity-75">Проанализируем ваши задачи и предложим оптимальное решение</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="{{ SITEURL }}/контакты/" class="btn btn-light btn-lg">
+                📞 Связаться с нами
+            </a>
+            <a href="{{ SITEURL }}/материалы-для-скачивания/" class="btn btn-outline-light btn-lg">
+                📋 Скачать материалы
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

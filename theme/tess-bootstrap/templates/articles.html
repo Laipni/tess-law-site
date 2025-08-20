@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Хлебные крошки -->
+<section class="breadcrumbs-section py-2">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="{{ SITEURL }}/" class="text-decoration-none">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Полезные статьи</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- ЗАГОЛОВОК С ИКОНКОЙ -->
+<section class="page-header py-5">
+    <div class="container text-center">
+        <div class="page-title-container mb-3">
+            <img src="{{ SITEURL }}/images/icons/articles-header.png" 
+                 alt="Статьи" class="page-icon"
+                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/897180b8-a83d-4ff6-8925-0f357ff4d4cb.png'">
+            <h1 class="page-title">Полезные статьи</h1>
+        </div>
+        <p class="lead text-muted">
+            Актуальная информация по налоговому и корпоративному праву от экспертов ТЕСС
+        </p>
+    </div>
+</section>
+
+<!-- Фильтры статей -->
+<section class="filters-section py-3 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button class="btn btn-primary btn-sm">🏛️ Налоговое право</button>
+                    <button class="btn btn-outline-primary btn-sm">🏢 Корпоративное право</button>
+                    <button class="btn btn-outline-primary btn-sm">🔒 Персональные данные</button>
+                    <button class="btn btn-outline-primary btn-sm">⚖️ Судебная практика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Основная секция со статьями -->
+<section class="articles-section py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Статья 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card article-card h-100">
+                    <div class="card-body">
+                        <div class="article-meta">📅 15 июля 2024 | 👤 А. Лайпнис</div>
+                        <h4 class="article-title">Как избежать доначислений при налоговой проверке</h4>
+                        <p class="article-excerpt">Основные стратегии защиты от претензий ФНС. Разбираем типичные ошибки и способы их предотвращения при камеральных и выездных проверках. Практические рекомендации для бизнеса.</p>
+                        <div class="article-footer">
+                            <a href="#" class="read-more">Читать далее →</a>
+                            <span class="badge bg-primary">Налоги</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card article-card h-100">
+                    <div class="card-body">
+                        <div class="article-meta">📅 22 июня 2024 | 👤 А. Лайпнис</div>
+                        <h4 class="article-title">Новые требования к обработке персональных данных</h4>
+                        <p class="article-excerpt">Изменения в законодательстве о персональных данных в 2024 году. Что нужно знать компаниям для соблюдения 152-ФЗ. Штрафы и способы их избежать.</p>
+                        <div class="article-footer">
+                            <a href="#" class="read-more">Читать далее →</a>
+                            <span class="badge bg-success">Персданные</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card article-card h-100">
+                    <div class="card-body">
+                        <div class="article-meta">📅 8 июня 2024 | 👤 А. Лайпнис</div>
+                        <h4 class="article-title">Защита от субсидиарной ответственности</h4>
+                        <p class="article-excerpt">Практические рекомендации для директоров и учредителей. Как правильно документировать управленческие решения для защиты от рисков привлечения к ответственности.</p>
+                        <div class="article-footer">
+                            <a href="#" class="read-more">Читать далее →</a>
+                            <span class="badge bg-warning">Банкротство</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card article-card h-100">
+                    <div class="card-body">
+                        <div class="article-meta">📅 30 мая 2024 | 👤 А. Лайпнис</div>
+                        <h4 class="article-title">Корпоративные споры: тренды и решения</h4>
+                        <p class="article-excerpt">Анализ судебной практики по корпоративным спорам. Эффективные стратегии защиты интересов участников бизнеса в арбитражных судах. Новые тенденции 2024 года.</p>
+                        <div class="article-footer">
+                            <a href="#" class="read-more">Читать далее →</a>
+                            <span class="badge bg-info">Корпоративное</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card article-card h-100">
+                    <div class="card-body">
+                        <div class="article-meta">📅 16 мая 2024 | 👤 А. Лайпнис</div>
+                        <h4 class="article-title">Налоговое планирование в условиях санкций</h4>
+                        <p class="article-excerpt">Законные способы минимизации налоговых обязательств в новых экономических условиях. Обзор последних разъяснений Минфина и ФНС по спорным вопросам налогообложения.</p>
+                        <div class="article-footer">
+                            <a href="#" class="read-more">Читать далее →</a>
+                            <span class="badge bg-primary">Налоги</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card article-card h-100">
+                    <div class="card-body">
+                        <div class="article-meta">📅 2 мая 2024 | 👤 А. Лайпнис</div>
+                        <h4 class="article-title">Интеллектуальная собственность в цифровую эпоху</h4>
+                        <p class="article-excerpt">Защита авторских прав в интернете. Особенности регистрации и защиты цифровых активов компании в условиях развития IT-технологий. Новые вызовы и решения.</p>
+                        <div class="article-footer">
+                            <a href="#" class="read-more">Читать далее →</a>
+                            <span class="badge bg-secondary">IP-право</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 7 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card article-card h-100">
+                    <div class="card-body">
+                        <div class="article-meta">📅 18 апреля 2024 | 👤 А. Лайпнис</div>
+                        <h4 class="article-title">ESG-комплаенс для российского бизнеса</h4>
+                        <p class="article-excerpt">Экологические, социальные и управленческие стандарты в российских реалиях. Как построить систему ESG-комплаенса и избежать репутационных рисков.</p>
+                        <div class="article-footer">
+                            <a href="#" class="read-more">Читать далее →</a>
+                            <span class="badge bg-success">ESG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 8 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card article-card h-100">
+                    <div class="card-body">
+                        <div class="article-meta">📅 5 апреля 2024 | 👤 А. Лайпнис</div>
+                        <h4 class="article-title">Цифровые валюты: правовое регулирование 2025</h4>
+                        <p class="article-excerpt">Новое законодательство о криптовалютах в России. Налогообложение операций с цифровыми активами. Риски и возможности для бизнеса в 2025 году.</p>
+                        <div class="article-footer">
+                            <a href="#" class="read-more">Читать далее →</a>
+                            <span class="badge bg-warning">Криптовалюты</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 9 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card article-card h-100">
+                    <div class="card-body">
+                        <div class="article-meta">📅 22 марта 2024 | 👤 А. Лайпнис</div>
+                        <h4 class="article-title">Трансфертное ценообразование: новые подходы</h4>
+                        <p class="article-excerpt">Изменения в контроле трансфертного ценообразования в 2024-2025 гг. Методы обоснования рыночных цен. Документооборот и защита от доначислений при ТЦО-проверках.</p>
+                        <div class="article-footer">
+                            <a href="#" class="read-more">Читать далее →</a>
+                            <span class="badge bg-info">ТЦО</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA секция -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4">Нужна персональная консультация?</h2>
+        <p class="lead mb-4 opacity-75">Обсудим ваши задачи и предложим оптимальное решение</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="{{ SITEURL }}/контакты/" class="btn btn-light btn-lg">
+                📞 Связаться с нами
+            </a>
+            <a href="{{ SITEURL }}/услуги/" class="btn btn-outline-light btn-lg">
+                💼 Наши услуги
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

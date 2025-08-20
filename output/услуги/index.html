@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Юридическая фирма "ТЕСС"</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/fa389539-ccd3-4551-8084-3d8553702bb1.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ИСПРАВЛЕННЫЕ СТИЛИ -->
+    <style>
+/* ОСНОВНЫЕ ПЕРЕМЕННЫЕ */
+:root {
+  --ocean-deep: #0367a6;
+  --ocean-bright: #30e6fa;
+  --ocean-light: #7dd3fc;
+  --white: #ffffff;
+  --gray-600: #475569;
+  --gray-800: #1e293b;
+  
+  --gradient-ocean: linear-gradient(135deg, #0367a6 0%, #30e6fa 100%);
+  --gradient-ocean-reverse: linear-gradient(135deg, #30e6fa 0%, #0367a6 100%);
+  --bg-office: url('https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/46be7a5c-6149-4c3b-8d1e-50feb6bd9285.png');
+  
+  --shadow-light: 0 2px 8px rgba(3, 103, 166, 0.1);
+  --shadow-medium: 0 4px 16px rgba(3, 103, 166, 0.15);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-800);
+  margin: 0;
+  padding: 0;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(224, 247, 255, 0.8)),
+    var(--bg-office) center/cover fixed;
+  background-color: var(--white);
+}
+
+/* УНИФИЦИРОВАННАЯ ТИПОГРАФИКА */
+h1 { font-size: 2rem; font-weight: 700; color: var(--ocean-deep); margin-bottom: 1rem; }
+h2 { font-size: 1.5rem; font-weight: 700; color: var(--ocean-deep); margin-bottom: 0.75rem; }
+h3 { font-size: 1.25rem; font-weight: 600; color: var(--ocean-deep); margin-bottom: 0.75rem; }
+h4 { font-size: 1.125rem; font-weight: 600; color: var(--ocean-deep); margin-bottom: 0.5rem; }
+h5 { font-size: 1rem; font-weight: 600; color: var(--ocean-deep); margin-bottom: 0.5rem; }
+
+.hero-title { 
+  font-size: 2.25rem; 
+  background: var(--gradient-ocean);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.display-4, .display-5 { 
+  font-size: 1.5rem !important; 
+  color: var(--ocean-deep) !important;
+  font-weight: 700;
+}
+
+p, .lead { 
+  font-size: 16px; 
+  color: var(--gray-800); 
+  line-height: 1.6;
+}
+
+.lead { 
+  font-size: 18px; 
+  color: var(--gray-600);
+}
+
+.text-muted { color: var(--gray-600) !important; }
+
+/* КРИТИЧЕСКИ ТОНКАЯ НАВИГАЦИЯ С КРУПНЫМ ЛОГОТИПОМ */
+.navbar {
+  background: var(--gradient-ocean);
+  box-shadow: var(--shadow-medium);
+  padding: 6px 0; /* СУПЕР ТОНКАЯ - ВСЕГО 12px ВЫСОТА */
+  width: 100%;
+  z-index: 1030;
+}
+
+body.homepage .navbar { position: fixed; top: 0; }
+body:not(.homepage) .navbar { position: relative; }
+
+.navbar-brand {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* ЛОГОТИП 64px В СУПЕР ТОНКОЙ ПОЛОСЕ */
+.navbar-logo {
+  width: 64px;
+  height: 64px;
+  margin-right: 12px;
+  background: white;
+  border-radius: 8px;
+  padding: 6px;
+  object-fit: contain;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.company-details {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.company-expansion {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.navbar-nav .nav-link {
+  color: var(--white);
+  font-weight: 500;
+  padding: 4px 8px;
+  margin: 0 2px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.navbar-nav .nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--ocean-light);
+}
+
+.navbar .btn {
+  background: var(--white);
+  color: var(--ocean-deep);
+  border: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  box-shadow: var(--shadow-light);
+}
+
+.navbar .btn:hover {
+  background: var(--ocean-light);
+  color: var(--white);
+}
+
+/* КОНТЕНТ */
+.main-content { padding-top: 0; }
+body.homepage .main-content { padding-top: 80px; } /* УМЕНЬШЕНО */
+
+/* HERO СЕКЦИЯ */
+.hero-section {
+  min-height: 75vh;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content { padding: 1rem 0; }
+
+.hero-text {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(224, 247, 255, 0.6);
+  box-shadow: var(--shadow-light);
+}
+
+.stats-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(224, 247, 255, 0.7);
+  box-shadow: var(--shadow-medium);
+}
+
+/* КАРТОЧКИ */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(224, 247, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.card-body {
+  padding: 1.5rem;
+  color: var(--gray-800);
+}
+
+.card-body h5 {
+  color: var(--ocean-deep);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* СЕКЦИИ */
+.competencies-section {
+  padding: 3rem 0;
+  background: rgba(224, 247, 255, 0.3);
+}
+
+.articles-section {
+  padding: 3rem 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.materials-section {
+  padding: 2rem 0;
+}
+
+/* СТАТЬИ - ИСПРАВЛЕННЫЙ СКРОЛЛ */
+.articles-scroll {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.articles-container {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  width: max-content;
+}
+
+.article-card {
+  min-width: 320px;
+  max-width: 320px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(224, 247, 255, 0.6);
+}
+
+.article-card .card-body {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-meta {
+  font-size: 14px;
+  color: var(--ocean-bright);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.article-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.article-excerpt {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.read-more {
+  color: var(--ocean-deep);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.read-more:hover { color: var(--ocean-bright); }
+
+/* ИКОНКИ */
+.competency-icon, .material-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  border: 2px solid rgba(3, 103, 166, 0.2);
+  box-shadow: var(--shadow-light);
+}
+
+.dna-icon { font-size: 1.5rem; }
+
+/* КНОПКИ */
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: var(--gradient-ocean);
+  color: var(--white);
+  box-shadow: var(--shadow-light);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  color: var(--white);
+}
+
+.btn-outline-primary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ocean-deep);
+  border: 2px solid var(--ocean-deep);
+}
+
+.btn-outline-primary:hover {
+  background: var(--ocean-deep);
+  color: var(--white);
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 18px;
+  border-radius: 25px;
+}
+
+/* CTA СЕКЦИЯ */
+.cta-section {
+  background: var(--gradient-ocean-reverse);
+  color: var(--white);
+  padding: 3rem 0;
+}
+
+.cta-section h2, .cta-section p { color: var(--white); }
+
+.cta-section .btn-light {
+  background: var(--white);
+  color: var(--ocean-deep);
+  border: none;
+}
+
+.cta-section .btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.cta-section .btn-outline-light:hover {
+  background: var(--white);
+  color: var(--ocean-deep);
+}
+
+/* ХЛЕБНЫЕ КРОШКИ И ЗАГОЛОВКИ СТРАНИЦ */
+.breadcrumbs-section {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(224, 247, 255, 0.6);
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.page-header {
+  background: rgba(224, 247, 255, 0.4);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--ocean-deep);
+}
+
+.page-header .lead {
+  font-size: 16px;
+  color: var(--gray-600);
+}
+
+/* ФОРМЫ */
+.contact-form-section {
+  background: rgba(248, 250, 252, 0.8);
+  padding: 2rem 0;
+}
+
+.form-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.form-control {
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+}
+
+/* FOOTER */
+.footer-gradient {
+  background: var(--gradient-ocean-reverse);
+  color: var(--white);
+  padding: 2rem 0 1rem;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background: white;
+  border-radius: 6px;
+  padding: 4px;
+  object-fit: contain;
+}
+
+.footer-gradient h5, .footer-gradient p, .footer-gradient a {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 15px;
+}
+
+.footer-gradient h5 { font-size: 18px; }
+
+.footer-gradient a:hover { color: var(--ocean-light); }
+
+/* УТИЛИТЫ */
+.text-primary { color: var(--ocean-deep) !important; }
+.bg-primary { background: var(--gradient-ocean) !important; }
+
+/* МОБИЛЬНАЯ АДАПТАЦИЯ */
+@media (max-width: 768px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+  .hero-title { font-size: 1.85rem; }
+  .display-4, .display-5 { font-size: 1.25rem !important; }
+  
+  body.homepage .main-content { padding-top: 60px; }
+  
+  .navbar { padding: 4px 0; }
+  
+  .navbar-logo {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+  }
+  
+  .company-name { font-size: 16px; }
+  .company-expansion { font-size: 10px; }
+  
+  .navbar .btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 3px 6px;
+    font-size: 13px;
+  }
+  
+  .footer-logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .card-body { padding: 1rem; }
+  .btn-lg { padding: 12px 20px; font-size: 16px; }
+  .competency-icon, .material-icon { width: 48px; height: 48px; }
+  
+  .article-card { min-width: 280px; max-width: 280px; }
+  .hero-section { min-height: 60vh; padding: 1rem 0; }
+  
+  .page-header h1 { font-size: 1.5rem; }
+  .page-header .lead { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+  .navbar { padding: 3px 0; }
+  .navbar-logo { width: 40px; height: 40px; }
+  .company-name { font-size: 14px; }
+  .company-expansion { font-size: 9px; }
+}
+</style>
+    
+</head>
+
+<body>
+    <!-- СУПЕР ТОНКАЯ НАВИГАЦИЯ -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="../">
+                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/1f2a8c78-73b6-4648-93d1-157fcb2e5852.png" 
+                     alt="ТЕСС" class="navbar-logo" onerror="this.style.display='none';">
+                <div class="company-details">
+                    <div class="company-name">Юридическая фирма "ТЕСС"</div>
+                    <div class="company-expansion">Территория Единого Системного Сопровождения</div>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../услуги/">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../полезные-статьи/">Полезные статьи</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../материалы-для-скачивания/">Материалы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../контакты/">Контакты</a></li>
+                </ul>
+                <a href="../контакты/" class="btn btn-light">Получить консультацию</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <article>
+                <header class="mb-5">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h1 class="display-5 fw-bold text-primary mb-3">Услуги</h1>
+                            <p class="lead text-muted"><p>Каталог услуг «ТЕСС» – налоговые споры, сопровождение сделок, корпоративные споры и другое для бизнеса.</p></p>
+                        </div>
+                    </div>
+                </header>
+                
+                <div class="page-content">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h1>Юридические услуги для бизнеса</h1>
+<p>Мы ведём компании на всех этапах: от первой консультации до финального судебного решения и его исполнения. С «ТЕСС» у вас одна точка входа по всем правовым вопросам.</p>
+<h2>Мы предлагаем</h2>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Услуга</th>
+        <th scope="col">Что получаете</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Юридические консультации</strong></td>
+        <td>Ясные рекомендации «что делать» и сроки без лишних формулировок</td>
+      </tr>
+      <tr>
+        <td><strong>Подготовка документов</strong></td>
+        <td>Договоры, иски, жалобы с учётом свежей практики судов</td>
+      </tr>
+      <tr>
+        <td><strong>Сопровождение сделок</strong></td>
+        <td>Проверка партнёров, налоговая оптимизация, безопасные расчёты</td>
+      </tr>
+      <tr>
+        <td><strong>Оспаривание сделок в банкротстве</strong></td>
+        <td>Сохранение активов, снижение риска личной ответственности руководства</td>
+      </tr>
+      <tr>
+        <td><strong>Представительство в суде</strong></td>
+        <td>Команда процессуалистов, готовых отстаивать позицию в апелляции и кассации</td>
+      </tr>
+      <tr>
+        <td><strong>Налоговые споры</strong></td>
+        <td>Снижение доначислений и поддержка при проверках ФНС</td>
+      </tr>
+      <tr>
+        <td><strong>Налоговые консультации</strong></td>
+        <td>Законные пути оптимизации налогообложения</td>
+      </tr>
+      <tr>
+        <td><strong>Защита персональных данных</strong></td>
+        <td>Полный комплекс работ под 152-ФЗ и обучение сотрудников</td>
+      </tr>
+      <tr>
+        <td><strong>Сопровождение долевых сделок</strong></td>
+        <td>Полный цикл: от письма о намерениях до государственной регистрации изменений</td>
+      </tr>
+      <tr>
+        <td><strong>Авторское право</strong></td>
+        <td>Регистрация и защита исключительных прав в судах</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Почему доверяют «ТЕСС»</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">🏆 33 года на рынке</h5>
+        <p class="card-text">Пережили все реформы законодательства и знаем практические нюансы.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">⚡ Быстрый ответ</h5>
+        <p class="card-text">Отвечаем на обращение в течение 120 минут.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">🤝 Работаем как внутренний отдел</h5>
+        <p class="card-text">Полное погружение в ваш бизнес без расходов на штат.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">🧮 Комплексный подход</h5>
+        <p class="card-text">Совместная работа юристов и бухгалтеров — точный расчёт налоговых последствий.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="text-center mt-5">
+  <h3>Запланировать бесплатный 15-минутный звонок</h3>
+  <p class="lead">Обсудим вашу ситуацию и предложим план действий</p>
+  <a href="../контакты" class="btn btn-primary btn-lg">Назначить время</a>
+</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA для страниц -->
+                <div class="mt-5">
+                    <div class="card">
+                        <div class="card-body p-4 text-center">
+                            <h5 class="fw-bold text-primary mb-3">Нужна консультация?</h5>
+                            <p class="mb-3">Получите персональную консультацию в течение 2 часов</p>
+                            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                <a href="../контакты/" class="btn btn-primary">
+                                    📞 Связаться с нами
+                                </a>
+                                <a href="mailto:laipnis@mail.ru" class="btn btn-outline-primary">
+                                    ✉️ Написать письмо
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <footer class="footer-gradient">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/1f2a8c78-73b6-4648-93d1-157fcb2e5852.png" 
+                             alt="ТЕСС" class="footer-logo" onerror="this.style.display='none';">
+                        <div>
+                            <h5 class="mb-0">Юридическая фирма «ТЕСС»</h5>
+                            <small class="opacity-75">Территория Единого Системного Сопровождения</small>
+                        </div>
+                    </div>
+                    <p class="mb-1">Профессиональные юридические услуги с 1992 года</p>
+                    <p class="small opacity-75 mb-0">Москва, Крымский вал, 9 • +7 926 741-96-09 • laipnis@mail.ru</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="small mb-0">© 2025 Все права защищены</p>
+                    <p class="small opacity-75 mb-0">Лицензированная юридическая практика</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

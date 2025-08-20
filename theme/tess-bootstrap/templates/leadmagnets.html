@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Хлебные крошки -->
+<section class="breadcrumbs-section py-2">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="{{ SITEURL }}/" class="text-decoration-none">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Материалы для скачивания</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- ЗАГОЛОВОК С ИКОНКОЙ -->
+<section class="page-header py-5">
+    <div class="container text-center">
+        <div class="page-title-container mb-3">
+            <img src="{{ SITEURL }}/images/icons/materials-header.png" 
+                 alt="Материалы" class="page-icon"
+                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/1d75da8a-9e5b-4074-ab18-dde35ae142fb.png'">
+            <h1 class="page-title">Материалы для скачивания</h1>
+        </div>
+        <p class="lead text-muted">
+            Бесплатные практические материалы от экспертов ТЕСС для защиты вашего бизнеса
+        </p>
+    </div>
+</section>
+
+<!-- Материалы -->
+<section class="materials-section py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Чек-лист подготовки к налоговой проверке -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card material-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="material-icon-container mb-4">
+                            <img src="{{ SITEURL }}/images/icons/checklist-shield.png" 
+                                 alt="Защита от налоговых проверок" class="material-icon-new"
+                                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/a99dfa4e-4695-4efc-bd1c-85bee6423e88.png'">
+                        </div>
+                        <h5 class="card-title fw-bold text-primary mb-3">
+                            Чек-лист подготовки к налоговой проверке
+                        </h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Пошаговый план действий для минимизации рисков при выездной проверке ФНС. Что подготовить заранее.
+                        </p>
+                        <a href="#" class="btn btn-primary mt-auto">
+                            📄 Скачать PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Шаблоны юридических документов -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card material-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="material-icon-container mb-4">
+                            <img src="{{ SITEURL }}/images/icons/legal-documents.png" 
+                                 alt="Юридические документы" class="material-icon-new"
+                                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/5bac5e94-88b2-4bcb-9e28-daac0ef2fdab.png'">
+                        </div>
+                        <h5 class="card-title fw-bold text-primary mb-3">
+                            Шаблоны юридических документов
+                        </h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Готовые формы договоров, уведомлений и заявлений для корпоративного права. Актуальные шаблоны.
+                        </p>
+                        <a href="#" class="btn btn-primary mt-auto">
+                            📄 Скачать DOCX
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Руководство по защите персональных данных -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card material-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="material-icon-container mb-4">
+                            <img src="{{ SITEURL }}/images/icons/privacy-protection.png" 
+                                 alt="Защита персональных данных" class="material-icon-new"
+                                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/f751a49b-e413-4625-925d-de6c283298e4.png'">
+                        </div>
+                        <h5 class="card-title fw-bold text-primary mb-3">
+                            Руководство по защите персональных данных
+                        </h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Практическое руководство по соблюдению требований 152-ФЗ в 2024 году. Штрафы и их избежание.
+                        </p>
+                        <a href="#" class="btn btn-primary mt-auto">
+                            📄 Скачать PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Памятка по банкротству -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card material-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="material-icon-container mb-4">
+                            <img src="{{ SITEURL }}/images/icons/bankruptcy-phoenix.png" 
+                                 alt="Банкротство и восстановление" class="material-icon-new"
+                                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/48d08fa9-e2c4-4458-bf22-fe774b19702e.png'">
+                        </div>
+                        <h5 class="card-title fw-bold text-primary mb-3">
+                            Памятка по банкротству
+                        </h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Как защититься от субсидиарной ответственности и оспаривания сделок. Практические советы.
+                        </p>
+                        <a href="#" class="btn btn-primary mt-auto">
+                            📄 Скачать PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Налоговое планирование 2024 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card material-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="material-icon-container mb-4">
+                            <img src="{{ SITEURL }}/images/icons/tax-planning.png" 
+                                 alt="Налоговое планирование" class="material-icon-new"
+                                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/604f5c99-96df-4d99-b99e-0f426e04921a.png'">
+                        </div>
+                        <h5 class="card-title fw-bold text-primary mb-3">
+                            Налоговое планирование 2025
+                        </h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Актуальные схемы оптимизации и последние изменения в налоговом законодательстве.
+                        </p>
+                        <a href="#" class="btn btn-primary mt-auto">
+                            📄 Скачать PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Судебная практика по налоговым спорам -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card material-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="material-icon-container mb-4">
+                            <img src="{{ SITEURL }}/images/icons/court-practice.png" 
+                                 alt="Судебная практика" class="material-icon-new"
+                                 onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/4dd8be5a-9463-47c7-96a9-412fbcdf09d3.png'">
+                        </div>
+                        <h5 class="card-title fw-bold text-primary mb-3">
+                            Судебная практика по налоговым спорам
+                        </h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Обзор ключевых решений ВАС РФ и стратегии защиты налогоплательщиков в 2024-2025 гг.
+                        </p>
+                        <a href="#" class="btn btn-primary mt-auto">
+                            📄 Скачать PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA форма -->
+<section class="cta-form-section py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary mb-3">
+                        Получите все материалы одним архивом
+                    </h2>
+                    <p class="lead text-muted">
+                        Оставьте контакты и получите доступ ко всем материалам + персональную консультацию
+                    </p>
+                </div>
+
+                <form class="contact-form">
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Имя *</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="company" class="form-label">Компания</label>
+                        <input type="text" class="form-control" id="company">
+                    </div>
+                    <div class="mb-4">
+                        <label for="question" class="form-label">Ваш вопрос (опционально)</label>
+                        <textarea class="form-control" id="question" rows="4"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-5">
+                            📋 Получить материалы
+                        </button>
+                        <p class="small text-muted mt-3 mb-0">
+                            Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
