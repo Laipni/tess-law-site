@@ -510,6 +510,32 @@ body.homepage .main-content { padding-top: 80px; } /* УМЕНЬШЕНО */
   .navbar-logo { width: 40px; height: 40px; }
   .company-name { font-size: 14px; }
   .company-expansion { font-size: 9px; }
+
+  /*
+   * Custom icon sizes to ensure the header icons and material icons are
+   * displayed at a consistent, modest size across all pages. The site’s
+   * existing CSS or Bootstrap styles may otherwise cause these images to
+   * expand to fill their containers. By specifying explicit dimensions
+   * here with !important, we override those defaults. Adjust the pixel
+   * values if you prefer slightly larger or smaller icons.
+   */
+  .page-icon {
+    width: 64px !important;
+    height: 64px !important;
+    object-fit: contain !important;
+  }
+  .page-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .material-icon-new {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain !important;
+  }
 }
 </style>
     
@@ -564,6 +590,7 @@ body.homepage .main-content { padding-top: 80px; } /* УМЕНЬШЕНО */
         <div class="page-title-container mb-3">
             <img src="https://laipni.github.io/tess-law-site/images/icons/articles-header.png" 
                  alt="Статьи" class="page-icon"
+                 style="width: 64px; height: 64px; object-fit: contain;"
                  onerror="this.src='https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/897180b8-a83d-4ff6-8925-0f357ff4d4cb.png'">
             <h1 class="page-title">Полезные статьи</h1>
         </div>
