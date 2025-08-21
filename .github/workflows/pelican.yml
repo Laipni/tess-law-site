@@ -1,0 +1,62 @@
+# This GitHub Actions workflow builds the Pelican site and deploys it to
+# the `gh-pages` branch on every push to the main branch.  It uses
+# Python to install your Pelican dependencies, runs the build using the
+# production settings file (`publishconf.py`), and then publishes the
+# generated HTML to GitHub Pages using the widely‑used peaceiris
+# action.  Once this workflow is committed to your repository and
+# enabled, your site at `https://laipni.github.io/tess‑law‑site` will
+# automatically update whenever you push changes to `main`.
+
+name: Build and Deploy Pelican
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository so that the workflow has access to the
+      # content, theme and configuration files.  Using fetch-depth 0
+      # ensures that ghp-import can push a new branch.
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # Set up the desired Python version.  Pelican 4.x works with
+      # Python 3.10+, but if you need a different version you can
+      # change this value.
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      # Install the dependencies required to build the site.  The
+      # requirements.txt in this project already pins Pelican and
+      # related packages.  If you add plugins or themes that require
+      # additional packages, list them there as well.
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Build the site using Pelican's production configuration.  The
+      # output will be written to the `output/` directory.
+      - name: Build site with Pelican
+        run: |
+          pelican content -o output -s publishconf.py
+
+      # Deploy the contents of the `output/` directory to the `gh-pages`
+      # branch.  The `peaceiris/actions-gh-pages` action handles
+      # creating the branch if it does not yet exist and pushing the
+      # new files.  It uses the GITHUB_TOKEN provided by GitHub
+      # automatically, so no additional secrets are needed.
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
