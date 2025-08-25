@@ -539,6 +539,53 @@ body.homepage .main-content { padding-top: 80px; } /* УМЕНЬШЕНО */
 }
 </style>
     
+  
+  <style>
+    /* Consistent sizing for header icons across pages */
+    .page-title-container img,
+    .page-icon {
+      width: 64px !important;
+      height: 64px !important;
+      max-width: 64px !important;
+      max-height: 64px !important;
+      object-fit: contain !important;
+    }
+    /* Flex layout for the title container */
+    .page-title-container {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1rem !important;
+      flex-wrap: wrap;
+    }
+    /* Material icons sizing */
+    .material-icon,
+    .material-icon-new {
+      width: 40px !important;
+      height: 40px !important;
+      max-width: 40px !important;
+      max-height: 40px !important;
+      object-fit: contain !important;
+    }
+    /* Service icons sizing */
+    .service-icon-container img,
+    .service-icon {
+      width: 80px !important;
+      height: 80px !important;
+      max-width: 80px !important;
+      max-height: 80px !important;
+      object-fit: contain !important;
+    }
+    /* Contact icons sizing */
+    .method-icon,
+    .contact-card img,
+    .contact-method-card img {
+      width: 64px !important;
+      height: 64px !important;
+      max-width: 64px !important;
+      max-height: 64px !important;
+      object-fit: contain !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -572,15 +619,15 @@ body.homepage .main-content { padding-top: 80px; } /* УМЕНЬШЕНО */
     </nav>
 
     <main class="main-content">
-<div class="container py-5">
+  <div class="container py-5">
     <div class="row justify-content-center">
-        <div class="col-lg-10">
-            <article>
-                <header class="mb-5">
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <h1 class="display-5 fw-bold text-primary mb-3">Бесплатные материалы</h1>
-                            <p class="lead text-muted"><h1>Получите полезные документы бесплатно</h1>
+      <div class="col-lg-10">
+        <article>
+          <header class="mb-5">
+            <div class="card">
+              <div class="card-body p-4">
+                <h1 class="display-5 fw-bold text-primary mb-3">Бесплатные материалы</h1>
+                <p class="lead text-muted"><h1>Получите полезные документы бесплатно</h1>
 <div class="row">
   <div class="col-lg-8">
     <p class="lead">Заполните форму ниже — мы моментально отправим документы на вашу электронную почту.</p>
@@ -617,14 +664,11 @@ body.homepage .main-content { padding-top: 80px; } /* УМЕНЬШЕНО */
           <li class="mb-3">
             <strong>📄 PDF-чек-лист</strong><br>
             <small class="text-muted">«Как избежать доначислений при выездной проверке» — 12 шагов до, во время и после визита ФНС …</small></li></ul></div></div></div></div></p>
-                        </div>
-                    </div>
-                </header>
-                
-                <div class="page-content">
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <h1>Получите полезные документы бесплатно</h1>
+              </div>
+            </div>
+          </header>
+          <div class="page-content mb-5">
+            <h1>Получите полезные документы бесплатно</h1>
 <div class="row">
   <div class="col-lg-8">
     <p class="lead">Заполните форму ниже — мы моментально отправим документы на вашу электронную почту.</p>
@@ -705,31 +749,21 @@ body.homepage .main-content { padding-top: 80px; } /* УМЕНЬШЕНО */
   <hr>
   <a href="../контакты" class="btn btn-info">Записаться на консультацию</a>
 </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- CTA для страниц -->
-                <div class="mt-5">
-                    <div class="card">
-                        <div class="card-body p-4 text-center">
-                            <h5 class="fw-bold text-primary mb-3">Нужна консультация?</h5>
-                            <p class="mb-3">Получите персональную консультацию в течение 2 часов</p>
-                            <div class="d-flex gap-3 justify-content-center flex-wrap">
-                                <a href="../контакты/" class="btn btn-primary">
-                                    📞 Связаться с нами
-                                </a>
-                                <a href="mailto:laipnis@mail.ru" class="btn btn-outline-primary">
-                                    ✉️ Написать письмо
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body p-4">
+              <h2 class="h4 mb-3">Нужна консультация?</h2>
+              <p class="mb-4">Получите персональную консультацию в течение 2&nbsp;часов</p>
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="../контакты/" class="btn btn-primary">📞&nbsp;Связаться с нами</a>
+                <a href="mailto:laipnis@mail.ru" class="btn btn-outline-primary">✉️&nbsp;Написать письмо</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
-</div>
+  </div>
     </main>
 
     <footer class="footer-gradient">
