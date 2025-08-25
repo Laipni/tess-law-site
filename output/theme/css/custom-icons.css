@@ -1,0 +1,66 @@
+/*
+ * custom-icons.css
+ * Additional CSS to harmonize icon sizes across the TESS site.
+ * This file should be placed in the theme's static CSS directory (e.g.,
+ * theme/tess-bootstrap/static/css/) and linked from the base.html
+ * template after the main stylesheet. It overrides default icon sizes
+ * to ensure consistent presentation across all pages.
+ */
+
+/* General header icon sizing */
+img[src*='services-header'],
+img[src*='contacts-header'],
+img[src*='materials-header'],
+img.page-icon {
+  width: 64px !important;
+  height: 64px !important;
+  object-fit: contain !important;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-card-border);
+  box-shadow: var(--shadow-md);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Material icons */
+.material-icon,
+.material-icon-new {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain !important;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--color-card-border);
+}
+
+/* Service icons */
+.service-icon-container img,
+.service-icon {
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: contain !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-1);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-primary);
+}
+
+/* Contact icons */
+.method-icon,
+.contact-card img,
+.contact-method-card img {
+  width: 64px !important;
+  height: 64px !important;
+  object-fit: contain !important;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-card-border);
+  box-shadow: var(--shadow-md);
+}
