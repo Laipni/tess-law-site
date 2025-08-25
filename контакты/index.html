@@ -539,6 +539,53 @@ body.homepage .main-content { padding-top: 80px; } /* УМЕНЬШЕНО */
 }
 </style>
     
+  
+  <style>
+    /* Consistent sizing for header icons across pages */
+    .page-title-container img,
+    .page-icon {
+      width: 64px !important;
+      height: 64px !important;
+      max-width: 64px !important;
+      max-height: 64px !important;
+      object-fit: contain !important;
+    }
+    /* Flex layout for the title container */
+    .page-title-container {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1rem !important;
+      flex-wrap: wrap;
+    }
+    /* Material icons sizing */
+    .material-icon,
+    .material-icon-new {
+      width: 40px !important;
+      height: 40px !important;
+      max-width: 40px !important;
+      max-height: 40px !important;
+      object-fit: contain !important;
+    }
+    /* Service icons sizing */
+    .service-icon-container img,
+    .service-icon {
+      width: 80px !important;
+      height: 80px !important;
+      max-width: 80px !important;
+      max-height: 80px !important;
+      object-fit: contain !important;
+    }
+    /* Contact icons sizing */
+    .method-icon,
+    .contact-card img,
+    .contact-method-card img {
+      width: 64px !important;
+      height: 64px !important;
+      max-width: 64px !important;
+      max-height: 64px !important;
+      object-fit: contain !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -572,152 +619,69 @@ body.homepage .main-content { padding-top: 80px; } /* УМЕНЬШЕНО */
     </nav>
 
     <main class="main-content">
-<div class="container py-5">
+  <div class="container py-5">
     <div class="row justify-content-center">
-        <div class="col-lg-10">
-            <article>
-                <header class="mb-5">
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <div class="page-title-container mb-3">
-                                <img src="https://laipni.github.io/tess-law-site/images/icons/phone-contact.png" alt="Контакты" class="page-icon me-3">
-                                <h1 class="display-5 fw-bold text-primary mb-3 d-inline-block">Контакты</h1>
-                            </div>
-                            <p class="lead text-muted"><p>Свяжитесь с нами</p>
-<div class="row"> <div class="col-lg-6"> <h2>📞 Контактная информация</h2>
-<div class="card mb-4">
-  <div class="card-body">
-    <h5 class="card-title">📧 Электронная почта</h5>
-    <p class="card-text">
-      <a href="mailto:laipnis@mail.ru" class="text-decoration-none">laipnis@mail.ru</a><br>
-      <small class="text-muted">Отвечаем в течение 2 часов в рабочее время</small>
-    </p>
-  </div>
-</div>
-
-<div class="card mb-4">
-  <div class="card-body">
-    <h5 class="card-title">📱 Телефон</h5>
-    <p class="card-text">
-      <a href="tel:+79267419609" class="text-decoration-none">+7 926 741-96-09</a><br>
-      <small class="text-muted">Звоните с 9:00 до 18:00 по московскому времени</small>
-    </p>
-  </div>
-</div>
-
-<div class="card mb-4">
-  <div class="card-body">
-    <h5 class="card-title">📍 Местоположение</h5>
-    <p class="card-text">
-      <strong>Москва, Крымский вал, 9</strong><br>
-      <small class="text-muted">Встречи по предварительной записи</small>
-    </p>
-  </div>
-</div>
-
-</div> <div class="col-lg-6"> <h2>🕒 Часы работы</h2>
-<div class="table-responsive">
-  <table class="table table-striped">
-    <tbody>
-      <tr>
-        <td><strong>Понедельник - Пятница</strong></td>
-        <td>9:00 - 18:00</td>
-      </tr>
-      <tr>
-        <td><strong>Суббота …</strong></td></tr></tbody></table></div></div></div></p>
-                        </div>
-                    </div>
-                </header>
-                
-                <div class="page-content">
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <p>Свяжитесь с нами</p>
-<div class="row"> <div class="col-lg-6"> <h2>📞 Контактная информация</h2>
-<div class="card mb-4">
-  <div class="card-body">
-    <h5 class="card-title">📧 Электронная почта</h5>
-    <p class="card-text">
-      <a href="mailto:laipnis@mail.ru" class="text-decoration-none">laipnis@mail.ru</a><br>
-      <small class="text-muted">Отвечаем в течение 2 часов в рабочее время</small>
-    </p>
-  </div>
-</div>
-
-<div class="card mb-4">
-  <div class="card-body">
-    <h5 class="card-title">📱 Телефон</h5>
-    <p class="card-text">
-      <a href="tel:+79267419609" class="text-decoration-none">+7 926 741-96-09</a><br>
-      <small class="text-muted">Звоните с 9:00 до 18:00 по московскому времени</small>
-    </p>
-  </div>
-</div>
-
-<div class="card mb-4">
-  <div class="card-body">
-    <h5 class="card-title">📍 Местоположение</h5>
-    <p class="card-text">
-      <strong>Москва, Крымский вал, 9</strong><br>
-      <small class="text-muted">Встречи по предварительной записи</small>
-    </p>
-  </div>
-</div>
-
-</div> <div class="col-lg-6"> <h2>🕒 Часы работы</h2>
-<div class="table-responsive">
-  <table class="table table-striped">
-    <tbody>
-      <tr>
-        <td><strong>Понедельник - Пятница</strong></td>
-        <td>9:00 - 18:00</td>
-      </tr>
-      <tr>
-        <td><strong>Суббота</strong></td>
-        <td>По предварительной записи</td>
-      </tr>
-      <tr>
-        <td><strong>Воскресенье</strong></td>
-        <td>Выходной</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="alert alert-info" role="alert">
-  <h6 class="alert-heading">⚡ Срочные вопросы</h6>
-  <p class="mb-0">При критической ситуации (блокировка счетов, срочное заседание) звоните в любое время — найдём способ помочь.</p>
-</div>
-
-</div> </div>
-<p>📝 Как лучше обратиться за помощью</p>
-<div class="row"> <div class="col-md-4"> <div class="card h-100"> <div class="card-body text-center"> <div class="display-4 text-primary">📧</div> <h5 class="card-title">По e-mail</h5> <p class="card-text">Для подробного описания ситуации. Приложите документы, если они есть.</p> <a href="mailto:laipnis@mail.ru?subject=Консультация по налоговому праву" class="btn btn-outline-primary">Написать письмо</a> </div> </div> </div> <div class="col-md-4"> <div class="card h-100"> <div class="card-body text-center"> <div class="display-4 text-success">📞</div> <h5 class="card-title">По телефону</h5> <p class="card-text">Для срочных консультаций и записи на встречу. Быстро обсудим план действий.</p> <a href="tel:+79267419609" class="btn btn-outline-success">Позвонить сейчас</a> </div> </div> </div> <div class="col-md-4"> <div class="card h-100"> <div class="card-body text-center"> <div class="display-4 text-info">🤝</div> <h5 class="card-title">Личная встреча</h5> <p class="card-text">Для сложных дел и заключения договоров. Офис в центре Москвы.</p> <a href="mailto:laipnis@mail.ru?subject=Запись на встречу" class="btn btn-outline-info">Записаться</a> </div> </div> </div> </div>
-<div class="bg-light p-4 rounded mt-5"> <h3 class="text-center">💼 Первая консультация — бесплатно</h3> <p class="text-center lead">15 минут достаточно, чтобы понять ситуацию и предложить план решения</p> <div class="text-center"> <a href="mailto:laipnis@mail.ru?subject=Бесплатная консультация" class="btn btn-primary btn-lg me-3">Получить консультацию</a> <a href="../leadmagnets" class="btn btn-outline-secondary btn-lg">Скачать материалы</a> </div> </div>
-                        </div>
-                    </div>
+      <div class="col-lg-10">
+        <article>
+          <header class="mb-5">
+            <div class="card">
+              <div class="card-body p-4">
+                <div class="page-title-container mb-3">
+                  <img src="https://laipni.github.io/tess-law-site/images/icons/phone-contact.png" alt="Контакты" class="page-icon me-3">
+                  <h1 class="display-5 fw-bold text-primary mb-3 d-inline-block">Контакты</h1>
                 </div>
-                
-                <!-- CTA для страниц -->
-                <div class="mt-5">
-                    <div class="card">
-                        <div class="card-body p-4 text-center">
-                            <h5 class="fw-bold text-primary mb-3">Нужна консультация?</h5>
-                            <p class="mb-3">Получите персональную консультацию в течение 2 часов</p>
-                            <div class="d-flex gap-3 justify-content-center flex-wrap">
-                                <a href="https://laipni.github.io/tess-law-site/контакты/" class="btn btn-primary">
-                                    📞 Связаться с нами
-                                </a>
-                                <a href="mailto:laipnis@mail.ru" class="btn btn-outline-primary">
-                                    ✉️ Написать письмо
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </div>
+                <p class="lead text-muted"><p>Свяжитесь с нами</p>
+<p>Мы всегда рады помочь вам. Вы можете связаться с нами любым удобным способом.</p>
+<p>📞 Контактная информация</p>
+<p>Электронная почта</p>
+<p><a href="mailto:laipnis@mail.ru">laipnis@mail.ru
+</a> — отвечаем в течение 2 часов в рабочее время.</p>
+<p>Телефон</p>
+<p><a href="tel:+79267419609">+7 926 741‑96‑09</a> — звоните с 9:00 до 18:00 по московскому времени.</p>
+<p>Местоположение</p>
+<p>Москва, Крымский …</p></p>
+              </div>
+            </div>
+          </header>
+          <div class="page-content mb-5">
+            <p>Свяжитесь с нами</p>
+<p>Мы всегда рады помочь вам. Вы можете связаться с нами любым удобным способом.</p>
+<p>📞 Контактная информация</p>
+<p>Электронная почта</p>
+<p><a href="mailto:laipnis@mail.ru">laipnis@mail.ru
+</a> — отвечаем в течение 2 часов в рабочее время.</p>
+<p>Телефон</p>
+<p><a href="tel:+79267419609">+7 926 741‑96‑09</a> — звоните с 9:00 до 18:00 по московскому времени.</p>
+<p>Местоположение</p>
+<p>Москва, Крымский вал, 9 — встречи по предварительной записи.</p>
+<p>🕒 Часы работы
+День недели Время
+Понедельник – Пятница   9:00 – 18:00
+Суббота По предварительной записи
+Воскресенье Выходной
+⚡ Срочные вопросы</p>
+<p>При критической ситуации (блокировка счетов, срочное заседание) звоните в любое время — мы найдём способ помочь.</p>
+<p>🤝 Как лучше обратиться за помощью</p>
+<p>По e‑mail — для подробного описания ситуации. Приложите документы, если они есть.</p>
+<p>По телефону — для срочных консультаций и записи на встречу. Быстро обсудим план действий.</p>
+<p>Личная встреча — для сложных дел и заключения договоров. Офис в центре Москвы. Обсудим место встречи индивидуально.</p>
+<p>💼 Первая консультация — бесплатно</p>
+<p>15 минут достаточно, чтобы понять ситуацию и предложить план решения. Свяжитесь с нами, чтобы получить консультацию или скачать полезные материалы.</p>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body p-4">
+              <h2 class="h4 mb-3">Нужна консультация?</h2>
+              <p class="mb-4">Получите персональную консультацию в течение 2&nbsp;часов</p>
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="https://laipni.github.io/tess-law-site/контакты/" class="btn btn-primary">📞&nbsp;Связаться с нами</a>
+                <a href="mailto:laipnis@mail.ru" class="btn btn-outline-primary">✉️&nbsp;Написать письмо</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
-</div>
+  </div>
     </main>
 
     <footer class="footer-gradient">
