@@ -8,7 +8,15 @@
                 <header class="mb-5">
                     <div class="card">
                         <div class="card-body p-4">
+                            {# Добавляем вывод иконки перед заголовком, если в метаданных страницы определён параметр "Icon" (Jinja2 преобразует его в page.icon). #}
+                            {% if page.icon %}
+                            <div class="page-title-container mb-3">
+                                <img src="{{ SITEURL }}/images/icons/{{ page.icon }}" alt="{{ page.title }}" class="page-icon me-3">
+                                <h1 class="display-5 fw-bold text-primary mb-3 d-inline-block">{{ page.title }}</h1>
+                            </div>
+                            {% else %}
                             <h1 class="display-5 fw-bold text-primary mb-3">{{ page.title }}</h1>
+                            {% endif %}
                             {% if page.summary %}
                             <p class="lead text-muted">{{ page.summary }}</p>
                             {% endif %}
