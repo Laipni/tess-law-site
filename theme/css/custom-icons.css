@@ -57,3 +57,12 @@
   max-height: 64px !important;
   object-fit: contain !important;
 }
+
+/* Competency icons on the home page (Наши компетенции). */
+.competency-logo-container img {
+  width: 64px !important;
+  height: 64px !important;
+  max-width: 64px !important;
+  max-height: 64px !important;
+  object-fit: contain !important;
+}
