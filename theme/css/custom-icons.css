@@ -1,0 +1,59 @@
+/*
+ * custom-icons.css
+ *
+ * This stylesheet standardizes the size and layout of icons across all
+ * pages of the TESS site. It ensures that header icons, material
+ * thumbnails, service icons and contact method icons all render at
+ * consistent, modest sizes, regardless of other CSS rules.  The
+ * !important directive is used liberally here to override any
+ * conflicting Bootstrap or theme styles.
+ */
+
+/* Page header icons: used in the page title container. */
+.page-title-container img,
+.page-icon {
+  width: 64px !important;
+  height: 64px !important;
+  max-width: 64px !important;
+  max-height: 64px !important;
+  object-fit: contain !important;
+}
+
+/* Flexbox layout for the page title container: align icon and title horizontally. */
+.page-title-container {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  flex-wrap: wrap;
+}
+
+/* Material download icons on the Materials page. */
+.material-icon,
+.material-icon-new {
+  width: 40px !important;
+  height: 40px !important;
+  max-width: 40px !important;
+  max-height: 40px !important;
+  object-fit: contain !important;
+}
+
+/* Service icons on the Services page. */
+.service-icon-container img,
+.service-icon {
+  width: 80px !important;
+  height: 80px !important;
+  max-width: 80px !important;
+  max-height: 80px !important;
+  object-fit: contain !important;
+}
+
+/* Contact method icons on the Contacts page. */
+.method-icon,
+.contact-card img,
+.contact-method-card img {
+  width: 64px !important;
+  height: 64px !important;
+  max-width: 64px !important;
+  max-height: 64px !important;
+  object-fit: contain !important;
+}
